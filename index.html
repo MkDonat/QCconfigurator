@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Table align="center">
+        <tr>
+            <th><image src="img/joystick.png" alt="logo" width="50px" height="50px"></th>
+            <th><h1>QClap Configurator</h1></th>
+        </tr>
+    </Table>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <hr></hr>
+</head>
+<body>
+    <div>
+        <table id="configTable" align="center">
+            <tr data-row="1">
+                <td>BUTTON A</td>
+                <td><input type="text" id="BUTTON_A_KEY_1" class="key-input" data-row="1"></td>
+                <td><input type="text" id="BUTTON_A_KEY_2" class="key-input" data-row="1"></td>
+                <td><input type="text" id="BUTTON_A_KEY_3" class="key-input" data-row="1"></td>
+            </tr>
+            <tr data-row="2">
+                <td>BUTTON X</td>
+                <td><input type="text" id="BUTTON_X_KEY_1" class="key-input" data-row="2"></td>
+                <td><input type="text" id="BUTTON_X_KEY_2" class="key-input" data-row="2"></td>
+                <td><input type="text" id="BUTTON_X_KEY_3" class="key-input" data-row="2"></td>
+            </tr>
+            <tr data-row="3">
+                <td>BUTTON Y</td>
+                <td><input type="text" id="BUTTON_Y_KEY_1" class="key-input" data-row="3"></td>
+                <td><input type="text" id="BUTTON_Y_KEY_2" class="key-input" data-row="3"></td>
+                <td><input type="text" id="BUTTON_Y_KEY_3" class="key-input" data-row="3"></td>
+            </tr>
+            <tr data-row="4">
+                <td>BUTTON B</td>
+                <td><input type="text" id="BUTTON_B_KEY_1" class="key-input" data-row="4"></td>
+                <td><input type="text" id="BUTTON_B_KEY_2" class="key-input" data-row="4"></td>
+                <td><input type="text" id="BUTTON_B_KEY_3" class="key-input" data-row="4"></td>
+            </tr>
+            <tr data-row="5">
+                <td>BUTTON SET</td>
+                <td><input type="text" id="BUTTON_SET_KEY_1" class="key-input" data-row="5"></td>
+                <td><input type="text" id="BUTTON_SET_KEY_2" class="key-input" data-row="5"></td>
+                <td><input type="text" id="BUTTON_SET_KEY_3" class="key-input" data-row="5"></td>
+            </tr>
+            <tr data-row="6">
+                <td>BUTTON RESET</td>
+                <td><input type="text" id="BUTTON_RST_KEY_1" class="key-input" data-row="6"></td>
+                <td><input type="text" id="BUTTON_RST_KEY_2" class="key-input" data-row="6"></td>
+                <td><input type="text" id="BUTTON_RST_KEY_3" class="key-input" data-row="6"></td>
+            </tr>
+            <tr data-row="7">
+                <td>BUTTON MIDDLE</td>
+                <td><input type="text" id="BUTTON_M_KEY_1" class="key-input" data-row="7"></td>
+                <td><input type="text" id="BUTTON_M_KEY_2" class="key-input" data-row="7"></td>
+                <td><input type="text" id="BUTTON_M_KEY_3" class="key-input" data-row="7"></td>
+            </tr>
+            <tr data-row="8">
+                <td>BUTTON UP</td>
+                <td><input type="text" id="BUTTON_UP_KEY_1" class="key-input" data-row="8"></td>
+                <td><input type="text" id="BUTTON_UP_KEY_2" class="key-input" data-row="8"></td>
+                <td><input type="text" id="BUTTON_UP_KEY_3" class="key-input" data-row="8"></td>
+            </tr>
+            <tr data-row="9">
+                <td>BUTTON DOWN</td>
+                <td><input type="text" id="BUTTON_DOWN_KEY_1" class="key-input" data-row="9"></td>
+                <td><input type="text" id="BUTTON_DOWN_KEY_2" class="key-input" data-row="9"></td>
+                <td><input type="text" id="BUTTON_DOWN_KEY_3" class="key-input" data-row="9"></td>
+            </tr>
+            <tr data-row="10">
+                <td>BUTTON LEFT</td>
+                <td><input type="text" id="BUTTON_LEFT_KEY_1" class="key-input" data-row="10"></td>
+                <td><input type="text" id="BUTTON_LEFT_KEY_2" class="key-input" data-row="10"></td>
+                <td><input type="text" id="BUTTON_LEFT_KEY_3" class="key-input" data-row="10"></td>
+            </tr>
+            <tr data-row="11">
+                <td>BUTTON RIGHT</td>
+                <td><input type="text" id="BUTTON_RIGHT_KEY_1" class="key-input" data-row="11"></td>
+                <td><input type="text" id="BUTTON_RIGHT_KEY_2" class="key-input" data-row="11"></td>
+                <td><input type="text" id="BUTTON_RIGHT_KEY_3" class="key-input" data-row="11"></td>
+            </tr>
+            <tr data-row="12">
+                <td>BUTTON SIDE</td>
+                <td><input type="text" id="BUTTON_SIDE_KEY_1" class="key-input" data-row="12"></td>
+                <td><input type="text" id="BUTTON_SIDE_KEY_2" class="key-input" data-row="12"></td>
+                <td><input type="text" id="BUTTON_SIDE_KEY_3" class="key-input" data-row="12"></td>
+            </tr>
+            <tr>
+                <td><button id="LOAD_CONFIG">LOAD CONFIG</button></td>
+                <td><button id="SEND_CONFIG">SEND CONFIG</button></td>
+                <td><button id="SAVE_CONFIG">SAVE CONFIG</button></td>
+                <td><button id="RESET">RESET</button></td>            
+            </tr>
+        </table>
+    </div>
+    <div id="jsonOutput"></div> <!-- Ajout de cet élément pour afficher le JSON -->
+</body>
+<footer>
+    <hr></hr>
+        <div align="center">
+            <p>QClap Configurator - 2025</p>
+        </div>
+</footer>
+</html>
